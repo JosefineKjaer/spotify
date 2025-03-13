@@ -1,0 +1,19 @@
+---
+const { image, artist, type } = Astro.props;
+---
+
+<article>
+  <img src={image} alt="" />
+  <h3>{artist}</h3>
+  <p>{type}</p>
+</article>
+
+<style>
+  article {
+    padding: 0.5rem;
+  }
+  img {
+    width: 280px;
+    border-radius: 100%;
+  }
+</style>

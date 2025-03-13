@@ -1,11 +1,54 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Artist from "../components/Artist.astro";
+import Album from "../components/Album.astro";
+import Button from "../components/Buttons.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <main>
+    <section>
+      <div>
+        <h3>Opret din første playliste</h3>
+        <p>Det er nemt - vi skal nok hjælpe dig</p>
+        <Button name="Opret playliste" />
+      </div>
+      <div>
+        <h3>Lad os finde nogle podcasts, du kan følge</h3>
+        <p>Vi holder dig orienteret om nye episoder</p>
+        <Button name="Udforsk podcasts" />
+      </div>
+    </section>
+    <section>
+      <h2>Populære kunstnere</h2>
+      <section class="music_grid">
+        <Artist image="https://via.assets.so/album.png?id=1&q=95&w=360&h=360&fit=fill" artist="Miley Cyrus" type="Kunstner" />
+        <Artist image="https://via.assets.so/album.png?id=2&q=95&w=360&h=360&fit=fill" artist="Bentley" type="Kunstner" />
+        <Artist image="https://via.assets.so/album.png?id=3&q=95&w=360&h=360&fit=fill" artist="Rihanna" type="Kunstner" />
+        <Artist image="https://via.assets.so/album.png?id=4&q=95&w=360&h=360&fit=fill" artist="Jay-Z" type="Kunstner" />
+        <Artist image="https://via.assets.so/album.png?id=5&q=95&w=360&h=360&fit=fill" artist="Alan Jackson" type="Kunstner" />
+      </section>
+
+      <h2>Populære album og singler</h2>
+      <section class="music_grid">
+        <Album image="https://via.assets.so/album.png?id=6&q=95&w=360&h=360&fit=fill" artist="Michael Jackson" name="The Essential" />
+        <Album image="https://via.assets.so/album.png?id=7&q=95&w=360&h=360&fit=fill" artist="Jonas Brothers" name="A Little Bit Longer" />
+        <Album image="https://via.assets.so/album.png?id=8&q=95&w=360&h=360&fit=fill" artist="Lil Wayne" name="Rebirth" />
+        <Album image="https://via.assets.so/album.png?id=9&q=95&w=360&h=360&fit=fill" artist="The Black Eyed Peas" name="Monkey Business" />
+        <Album image="https://via.assets.so/album.png?id=10&q=95&w=360&h=360&fit=fill" artist="Dierks Bentley" name="Black" />
+      </section>
+    </section>
+  </main>
 </Layout>
+
+<style>
+  .music_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  div {
+    background-color: #2f2f2f;
+    padding: 10px;
+  }
+</style>
