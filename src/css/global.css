@@ -5,9 +5,24 @@ body {
   height: 100%;
   background-color: black;
   color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 main {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 4fr;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav p {
+  background-color: #2f2f2f;
+  border-radius: 25px;
+  padding: 13px;
+  padding-right: 250px;
+  color: #bcbcbc;
+  justify-content: space-around;
 }
