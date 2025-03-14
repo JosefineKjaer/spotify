@@ -1,9 +1,9 @@
 ---
-const { image, artist, type } = Astro.props;
+const { image, artist, type, square } = Astro.props;
 ---
 
 <article>
-  <img src={image} alt="" />
+  <img class={square ? "square" : ""} src={image} alt={artist} />
   <h3>{artist}</h3>
   <p>{type}</p>
 </article>
@@ -12,8 +12,13 @@ const { image, artist, type } = Astro.props;
   article {
     padding: 0.5rem;
   }
+
   img {
     width: 210px;
     border-radius: 100%;
+  }
+
+  .square {
+    border-radius: 5px;
   }
 </style>

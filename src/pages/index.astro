@@ -31,11 +31,11 @@ import Layout from "../layouts/Layout.astro";
 
       <h2>Populære album og singler</h2>
       <section class="music_grid">
-        <Album image="https://via.assets.so/album.png?id=6&q=95&w=360&h=360&fit=fill" artist="Michael Jackson" name="The Essential" />
-        <Album image="https://via.assets.so/album.png?id=7&q=95&w=360&h=360&fit=fill" artist="Jonas Brothers" name="A Little Bit Longer" />
-        <Album image="https://via.assets.so/album.png?id=8&q=95&w=360&h=360&fit=fill" artist="Lil Wayne" name="Rebirth" />
-        <Album image="https://via.assets.so/album.png?id=9&q=95&w=360&h=360&fit=fill" artist="The Black Eyed Peas" name="Monkey Business" />
-        <Album image="https://via.assets.so/album.png?id=10&q=95&w=360&h=360&fit=fill" artist="Dierks Bentley" name="Black" />
+        <Artist image="https://via.assets.so/album.png?id=6&q=95&w=360&h=360&fit=fill" artist="Michael Jackson" type="The Essential" square />
+        <Artist image="https://via.assets.so/album.png?id=7&q=95&w=360&h=360&fit=fill" artist="Jonas Brothers" type="A Little Bit Longer" square />
+        <Artist image="https://via.assets.so/album.png?id=8&q=95&w=360&h=360&fit=fill" artist="Lil Wayne" type="Rebirth" square />
+        <Artist image="https://via.assets.so/album.png?id=9&q=95&w=360&h=360&fit=fill" artist="The Black Eyed Peas" type="Monkey Business" square />
+        <Artist image="https://via.assets.so/album.png?id=10&q=95&w=360&h=360&fit=fill" artist="Dierks Bentley" type="Black" square />
       </section>
     </section>
   </main>
@@ -60,5 +60,9 @@ import Layout from "../layouts/Layout.astro";
     margin: 4px;
     padding: 10px;
     border-radius: 7px;
+  }
+
+  img {
+    border-radius: 100%;
   }
 </style>
